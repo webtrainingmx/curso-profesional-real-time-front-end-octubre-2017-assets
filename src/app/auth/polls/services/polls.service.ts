@@ -44,4 +44,25 @@ export class PollsService extends HttpService {
     return this.get( url, token );
   }
 
+  getPollById( id: number ): Observable<Poll> {
+    const url = `${AppConfig.API_SERVER_URL}/polls/${id}`;
+    const token = 'NotAvailable';
+
+    return this.get( url, token );
+  }
+
+  save( poll: Poll ): Observable<Poll> {
+    const url = `${AppConfig.API_SERVER_URL}/polls`;
+    const token = 'NotAvailable';
+
+    return this.post( url, poll, token );
+  }
+
+  // delete( poll: Poll ): Observable<Poll> {
+  //   const url = `${AppConfig.API_SERVER_URL}/polls/${poll.id}`;
+  //   const token = 'NotAvailable';
+  //
+  // return this.delete( url, poll, token );
+  // }
+
 }
