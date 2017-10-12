@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Poll } from '../../auth/polls/models/poll.model';
+import { VotesService } from '../../auth/polls/services/votes.service';
 
 @Component( {
   selector: 'app-poll-participation',
@@ -19,22 +20,26 @@ export class PollParticipationComponent implements OnInit {
       {
         'id': 1,
         'question_id': 1,
+        'poll_id': 1,
         'label': 'Angular'
       },
       {
         'id': 2,
+        'poll_id': 1,
         'question_id': 1,
         'label': 'React'
       },
       {
         'id': 3,
+        'poll_id': 1,
         'question_id': 1,
         'label': 'Vue'
       },
       {
-        'id': 3,
+        'id': 4,
+        'poll_id': 1,
         'question_id': 1,
-        'label': 'Vue'
+        'label': 'Ember.js'
       }
     ],
     'votes': [
@@ -42,31 +47,23 @@ export class PollParticipationComponent implements OnInit {
         'id': 1,
         'user_id': 1,
         'answer_id': 1,
-        'question_id': 1,
         'poll_id': 1
-      },
-      {
-        'id': 2,
-        'user_id': 2,
-        'answer_id': 2,
-        'question_id': 1,
-        'poll_id': 1
-      },
-      {
-        'id': 3,
-        'user_id': 3,
-        'answer_id': 2,
-        'question_id': 1,
-        'poll_id': 1
-      }
-    ]
+      } ]
   };
+
 
   userAnswer: any;
 
-  constructor() { }
+  constructor( private _voteService: VotesService ) { }
 
   ngOnInit() {
+
+  }
+
+  onClickSendVote( event: Event ) {
+    event.preventDefault();
+    this._voteService.sendVote( this.userAnswer );
+    console.log( 'Click to send', this.userAnswer );
 
   }
 
