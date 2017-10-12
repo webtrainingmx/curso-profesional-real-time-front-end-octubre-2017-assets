@@ -13,7 +13,11 @@ import { ChartModule } from 'primeng/primeng';
 import { PollParticipationComponent } from './public/poll-participation/poll-participation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material';
+
 import { IterateObjectPipe } from './common/iterate-object.pipe';
+import { HeaderComponent } from './common/header/header.component';
+import { FooterComponent } from './common/footer/footer.component';
+
 
 @NgModule( {
   declarations: [
@@ -21,7 +25,9 @@ import { IterateObjectPipe } from './common/iterate-object.pipe';
     PollsComponent,
     PollsReportsComponent,
     PollParticipationComponent,
-    IterateObjectPipe
+    IterateObjectPipe,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

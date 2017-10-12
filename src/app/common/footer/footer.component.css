@@ -1,0 +1,33 @@
+.b-logo {
+  float: left;
+  margin: 10px 0 0 20px;
+  padding: 5px 0 0 8px;
+  font-size: 26px;
+}
+
+.b-logo img{
+  height: 40px;
+}
+
+.b-logo a {
+  color: white;
+}
+
+.b-main-footer {
+  background: #002e51;
+}
+
+.b-main-footer__container {
+  min-width: 190px;
+  vertical-align: middle;
+}
+
+.b-main-footer__text{
+  font-family: 'Asap', Open-Sans;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: condensed;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin: 25px 0;
+}
