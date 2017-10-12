@@ -11,6 +11,8 @@ import { VotesService } from './auth/polls/services/votes.service';
 import { PollsReportsComponent } from './auth/admin/polls-reports/polls-reports.component';
 import { ChartModule } from 'primeng/primeng';
 import { PollParticipationComponent } from './public/poll-participation/poll-participation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRadioModule } from '@angular/material';
 
 @NgModule( {
   declarations: [
@@ -22,7 +24,9 @@ import { PollParticipationComponent } from './public/poll-participation/poll-par
   imports: [
     BrowserModule,
     FormsModule,
-    ChartModule
+    ChartModule,
+    BrowserAnimationsModule,
+    MatRadioModule
   ],
   providers: [ PollsService, AnswersService, QuestionsService, VotesService ],
   bootstrap: [ AppComponent ]

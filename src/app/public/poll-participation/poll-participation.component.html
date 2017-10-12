@@ -1,4 +1,11 @@
 <div class="well">
-<h1>Participa en la encuesta</h1>
-<h2>{{poll.question.label}}</h2>
+  <h1>Participa en la encuesta</h1>
+  <h2>{{poll.question.label}}</h2>
+
+  <mat-radio-group class="example-radio-group" [(ngModel)]="userAnswer">
+    <mat-radio-button class="example-radio-button" *ngFor="let answer of poll.answers" [value]="answer.label">
+      {{answer.label}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <div class="example-selected-value">Tu respuesta es: {{userAnswer}}</div>
 </div>

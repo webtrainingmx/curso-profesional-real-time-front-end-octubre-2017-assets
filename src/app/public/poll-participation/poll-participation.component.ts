@@ -62,6 +62,8 @@ export class PollParticipationComponent implements OnInit {
     ]
   };
 
+  userAnswer: any;
+
   constructor() { }
 
   ngOnInit() {
