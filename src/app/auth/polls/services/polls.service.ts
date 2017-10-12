@@ -3,14 +3,12 @@ import * as io from 'socket.io-client';
 import { Observable } from 'rxjs/Observable';
 import { AppConfig } from '../../../config/app.config';
 
-console.log( io );
-
 @Injectable()
 export class PollsService {
 
   socket;
 
-  constructor() { }
+  constructor() { this.socket = io( AppConfig.REAL_TIME_SERVER_URL ); }
 
   sendMessage( message: string ) {
     console.log( 'Sending message: ', message );
