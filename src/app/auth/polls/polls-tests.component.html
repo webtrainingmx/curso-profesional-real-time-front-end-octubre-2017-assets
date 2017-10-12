@@ -1,0 +1,20 @@
+<div *ngFor="let message of messages">
+  {{message.text}}
+</div>
+<!--<input [(ngModel)]="message"  /><button (click)="sendMessage()">Send</button>-->
+
+<!--<div *ngFor="let property of data | iterateObject">-->
+
+  <!--&lt;!&ndash; Iterate cars &ndash;&gt;-->
+  <!--<div class="b-cars" *ngIf="property.key === 'cars'">-->
+    <!--<div class="b-car" *ngFor="let car of property.value">-->
+      <!--<strong>Car name: </strong> {{ car.name }}-->
+    <!--</div>-->
+
+  <!--</div>-->
+
+<!--</div>-->
+
+<app-poll-participation></app-poll-participation>
+<app-polls-reports></app-polls-reports>
+

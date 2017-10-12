@@ -2,20 +2,26 @@ import { Injectable } from '@angular/core';
 import * as io from 'socket.io-client';
 import { Observable } from 'rxjs/Observable';
 import { AppConfig } from '../../../config/app.config';
+import { HttpService } from '../../common-services/http.service';
+import { Http } from '@angular/http';
+import { Poll } from '../models/poll.model';
 
 @Injectable()
-export class PollsService {
+export class PollsService extends HttpService {
 
   socket;
 
-  constructor() { this.socket = io( AppConfig.REAL_TIME_SERVER_URL ); }
+  constructor( private http: Http ) {
+    super( http );
+    this.socket = io( AppConfig.REAL_TIME_SERVER_URL );
+  }
 
   sendMessage( message: string ) {
     console.log( 'Sending message: ', message );
     this.socket.emit( 'new-message', message );
   }
 
-  getMessages(): Observable<any> {
+  getRealTimeMessages(): Observable<any> {
     const observable = new Observable( observer => {
       this.socket = io( AppConfig.REAL_TIME_SERVER_URL );
 
@@ -29,6 +35,13 @@ export class PollsService {
     } );
 
     return observable;
+  }
+
+  getPolls(): Observable<Array<Poll>> {
+    const url = `${AppConfig.API_SERVER_URL}/polls`;
+    const token = 'NotAvailable';
+
+    return this.get( url, token );
   }
 
 }

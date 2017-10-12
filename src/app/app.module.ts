@@ -17,6 +17,7 @@ import { MatRadioModule } from '@angular/material';
 import { IterateObjectPipe } from './common/iterate-object.pipe';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule( {
@@ -31,6 +32,7 @@ import { FooterComponent } from './common/footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     FormsModule,
     ChartModule,
     BrowserAnimationsModule,
