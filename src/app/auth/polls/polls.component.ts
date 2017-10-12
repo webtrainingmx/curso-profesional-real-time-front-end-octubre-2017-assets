@@ -11,6 +11,15 @@ export class PollsComponent implements OnInit, OnDestroy {
   messages = [];
   connection;
   message;
+  data = {
+    'name': 'John',
+    'age': 30,
+    'cars': [
+      { 'name': 'Ford', 'models': [ 'Fiesta', 'Focus', 'Mustang' ] },
+      { 'name': 'BMW', 'models': [ '320', 'X3', 'X5' ] },
+      { 'name': 'Fiat', 'models': [ '500', 'Panda' ] }
+      ]
+  };
 
   constructor( private _pollsService: PollsService ) { }
 

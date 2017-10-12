@@ -13,13 +13,15 @@ import { ChartModule } from 'primeng/primeng';
 import { PollParticipationComponent } from './public/poll-participation/poll-participation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material';
+import { IterateObjectPipe } from './common/iterate-object.pipe';
 
 @NgModule( {
   declarations: [
     AppComponent,
     PollsComponent,
     PollsReportsComponent,
-    PollParticipationComponent
+    PollParticipationComponent,
+    IterateObjectPipe
   ],
   imports: [
     BrowserModule,
