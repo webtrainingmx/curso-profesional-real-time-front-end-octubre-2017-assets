@@ -1,0 +1,60 @@
+.b-logo {
+  float: left;
+  margin: 5px 0 0 20px;
+  padding: 5px 0 0 8px;
+  font-size: 26px;
+}
+
+.b-logo img{
+  height: 40px;
+}
+
+.b-logo a {
+  color: white;
+}
+
+.b-main-header {
+  background: #002e51;
+  height: 65px;
+}
+
+.b-main-navigation {
+  float: right;
+  min-width: 190px;
+  text-align: right;
+}
+
+.b-main-navigation__items {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.b-main-navigation__item {
+  display: inline-block;
+  float: left;
+  text-align: center;
+}
+.b-main-navigation__icon {
+  display: block;
+  clear: both;
+  margin-bottom: 5px;
+}
+
+.b-main-navigation__link {
+  color: white;
+  display: block;
+  padding: 12px 20px;
+
+}
+.b-main-navigation__link:hover {
+  text-decoration: none;
+}
+
+.b-main-navigation__text{
+  font-family: 'Asap', Open-Sans;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: condensed;
+  letter-spacing: 0.5px;
+}

@@ -13,13 +13,17 @@ import { ChartModule } from 'primeng/primeng';
 import { PollParticipationComponent } from './public/poll-participation/poll-participation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material';
+import { HeaderComponent } from './common/header/header.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule( {
   declarations: [
     AppComponent,
     PollsComponent,
     PollsReportsComponent,
-    PollParticipationComponent
+    PollParticipationComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
