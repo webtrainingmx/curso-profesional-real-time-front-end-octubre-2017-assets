@@ -13,12 +13,20 @@ import { ChartModule } from 'primeng/primeng';
 import { PollParticipationComponent } from './public/poll-participation/poll-participation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material';
+import {Ng2Webstorage} from 'ngx-webstorage';
 
 import { IterateObjectPipe } from './common/iterate-object.pipe';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { HttpModule } from '@angular/http';
-
+import { LoginComponent } from './public/login/login.component';
+import { NotFoundComponent } from './common/not-found/not-found.component';
+import {HttpService} from './auth/common-services/http.service';
+import {PublicGuard} from './common/guards/public.guard';
+import {AuthGuard} from './common/guards/auth.guard';
+import {AuthenticationService} from './services/authentication.service';
+import {RouterModule} from '@angular/router';
+import {routes} from './app.routing';
 
 @NgModule( {
   declarations: [
@@ -28,7 +36,9 @@ import { HttpModule } from '@angular/http';
     PollParticipationComponent,
     IterateObjectPipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +46,11 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     ChartModule,
     BrowserAnimationsModule,
-    MatRadioModule
+    MatRadioModule,
+    RouterModule.forRoot(routes),
+    Ng2Webstorage
   ],
-  providers: [ PollsService, AnswersService, QuestionsService, VotesService ],
+  providers: [ PollsService, AnswersService, QuestionsService, VotesService, HttpService, PublicGuard, AuthGuard, AuthenticationService ],
   bootstrap: [ AppComponent ]
 } )
 export class AppModule {}
