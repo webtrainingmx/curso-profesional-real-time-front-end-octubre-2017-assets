@@ -31,17 +31,17 @@ export class PollParticipationComponent implements OnInit, OnDestroy {
 
   createDataForChart( poll ) {
     // Count the votes
-    const data = [];
+    const dataCounters = [];
 
     poll.answers.forEach( answer => {
       const counterPerAnswer = poll.votes.filter( vote => vote.answer_id === answer.id ).length;
-      data.push( counterPerAnswer );
+      dataCounters.push( counterPerAnswer );
     } );
 
 
     // Modify options for chart.js
     // this.dataForChartOptions.title.text = poll.question.label;
-    console.log( data );
+    console.log( dataCounters );
 
     return {
       labels: poll.answers.map( answer => answer.label ),
@@ -52,7 +52,7 @@ export class PollParticipationComponent implements OnInit, OnDestroy {
         backgroundColor: ChartsConfig.BG_COLORS,
         borderWidth: ChartsConfig.BORDER_WIDTH,
         borderColor: ChartsConfig.BORDER_COLORS,
-        data: data,
+        data: dataCounters,
       } ]
     };
   }
@@ -64,6 +64,7 @@ export class PollParticipationComponent implements OnInit, OnDestroy {
     this._pollsService.getPollById( pollID ).subscribe(
       ( data ) => {
         this.poll = data;
+        this.dataForChart = this.createDataForChart( this.poll );
       },
       error => {
         console.log( error );
