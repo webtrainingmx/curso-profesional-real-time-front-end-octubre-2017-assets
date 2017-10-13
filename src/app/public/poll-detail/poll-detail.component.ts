@@ -82,7 +82,7 @@ export class PollDetailComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // this.connectionToRealTimeService.unsubscribe();
+    this.connectionToRealTimeService.unsubscribe();
   }
 
 }
