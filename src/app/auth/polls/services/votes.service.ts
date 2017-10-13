@@ -20,7 +20,7 @@ export class VotesService {
     this.socket.emit( 'new-vote', answer );
   }
 
-  getVotes(): Observable<any> {
+  getRealTimeVotes(): Observable<any> {
     const observable = new Observable( observer => {
       this.socket = io( AppConfig.REAL_TIME_SERVER_URL );
 

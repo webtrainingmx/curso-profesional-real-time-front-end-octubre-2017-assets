@@ -1,4 +1,4 @@
-const REAL_TIME_SERVER_HOST = 'http://polls-api.webtraining.zone'; // 'http://localhost';
+const REAL_TIME_SERVER_HOST = 'http://localhost'; // 'http://polls-api.webtraining.zone'; //
 const REAL_TIME_SERVER_PORT = 3300;
 
 const AUTH_SERVER_URL_HOST = 'http://projects-api.webtraining.zone';
