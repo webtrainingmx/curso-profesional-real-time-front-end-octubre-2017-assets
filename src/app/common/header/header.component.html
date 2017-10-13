@@ -16,9 +16,9 @@
                 <span class="b-main-navigation__text">Encuestas</span>
               </a>
             </li>
-            <li class="b-main-navigation__item">
-              <a href="" class="b-main-navigation__link">
-                <span class="b-main-navigation__text">Estadísticas</span>
+            <li class="b-main-navigation__item" *ngIf="_authService.isLoggedIn()">
+              <a href="" class="b-main-navigation__link" (click)="logout()">
+                <span class="b-main-navigation__text" >Estadísticas</span>
               </a>
             </li>
           </ul>
