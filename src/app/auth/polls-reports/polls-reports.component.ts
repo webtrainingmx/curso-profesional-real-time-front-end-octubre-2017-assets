@@ -12,6 +12,9 @@ export class PollsReportsComponent implements OnInit {
   @Input()
   data: any;
 
+  @Input()
+  options: any;
+
   constructor( private _pollsService: PollsService ) {
     // this.data = {
     //   labels: [ 'Angular', 'React', 'Vue', 'Ember.js' ],
