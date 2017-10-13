@@ -1,7 +1,11 @@
-<h1>Encuestas: </h1>
+<h1 class="title">Encuestas: </h1>
 <div class="b-poll" *ngFor="let poll of polls">
-  <div class="b-question">
-    <strong>{{ poll.question.label }}</strong>
+  <div class="col-xs-12">
+    <div class="b-question">
+      <a routerLink="/encuestas/detalle/{{poll.id}}">
+        <strong>{{ poll.question.label }}</strong>
+      </a>
+    </div>
   </div>
 </div>
 

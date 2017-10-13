@@ -4,10 +4,10 @@ import { PollsService } from '../polls/services/polls.service';
 
 @Component( {
   selector: 'app-polls-reports',
-  templateUrl: './polls-details.component.html',
-  styleUrls: [ './polls-details.component.css' ]
+  templateUrl: './polls-reports.component.html',
+  styleUrls: [ './polls-reports.component.css' ]
 } )
-export class PollsDetailsComponent implements OnInit {
+export class PollsReportsComponent implements OnInit {
 
   @Input()
   data: any;

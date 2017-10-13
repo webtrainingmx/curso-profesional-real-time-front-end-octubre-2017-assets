@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PollParticipationComponent } from './poll-participation.component';
+import { PollParticipationComponent } from './poll-detail.component';
 
 describe('PollParticipationComponent', () => {
   let component: PollParticipationComponent;
