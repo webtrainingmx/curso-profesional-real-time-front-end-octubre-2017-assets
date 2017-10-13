@@ -1,0 +1,38 @@
+.b-login-form{
+  display: inline-block;
+  max-width: 50%;
+  min-width: 45%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 10%;
+}
+
+.background{
+  background-image: url('./../../../assets/illustration@3x.png');
+  min-height: 645px;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position: 100% 100%;
+  background-size: 50%;
+}
+
+.title{
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+  letter-spacing: 3.8px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.subTitle{
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  color: #032f50;
+  max-width: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
