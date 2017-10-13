@@ -8,7 +8,7 @@ import { PollsService } from './auth/polls/services/polls.service';
 import { AnswersService } from './auth/polls/services/answers.service';
 import { QuestionsService } from './auth/polls/services/questions.service';
 import { VotesService } from './auth/polls/services/votes.service';
-import { PollsReportsComponent } from './auth/polls-reports/polls-reports.component';
+import { PollsDetailsComponent } from './auth/polls-details/polls-details.component';
 import { ChartModule } from 'primeng/primeng';
 import { PollParticipationComponent } from './public/poll-participation/poll-participation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,7 +32,7 @@ import {routes} from './app.routing';
   declarations: [
     AppComponent,
     PollsComponent,
-    PollsReportsComponent,
+    PollsDetailsComponent,
     PollParticipationComponent,
     IterateObjectPipe,
     HeaderComponent,

@@ -1,12 +1,10 @@
-<h1>Encuestas</h1>
+<h1>Encuestas: </h1>
 <div class="b-poll" *ngFor="let poll of polls">
-  <!--{{ poll | json }}-->
   <div class="b-question">
     <strong>{{ poll.question.label }}</strong>
   </div>
 </div>
 
-<app-poll-participation></app-poll-participation>
 
 
 
