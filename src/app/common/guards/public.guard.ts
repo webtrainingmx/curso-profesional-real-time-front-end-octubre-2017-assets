@@ -14,7 +14,9 @@ export class PublicGuard implements CanActivate {
     if (!this._authenticationService.isLoggedIn()) {
       return true;
     }
-
+    if (state.url !== '/login') {
+      return true;
+    }
     console.log('you are login!');
     this.router.navigate(['/home']);
     return false;
