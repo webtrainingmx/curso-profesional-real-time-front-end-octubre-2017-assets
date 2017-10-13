@@ -19,7 +19,7 @@ export class PollParticipationComponent implements OnInit {
 
   ngOnInit() {
 
-    // TODO: Change this to be a dynamic paramenter
+    // TODO: Change this to be a dynamic parameter
     const pollID = 1;
     this._pollsService.getPollById( pollID ).subscribe(
       ( data ) => {
