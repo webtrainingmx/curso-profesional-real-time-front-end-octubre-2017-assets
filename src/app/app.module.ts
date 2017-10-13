@@ -24,7 +24,7 @@ import {NotFoundComponent} from './common/not-found/not-found.component';
 import {HttpService} from './auth/common-services/http.service';
 import {PublicGuard} from './common/guards/public.guard';
 import {AuthGuard} from './common/guards/auth.guard';
-import {AuthenticationService} from './services/authentication.service';
+import {AuthenticationService} from './common/services/authentication.service';
 import {RouterModule} from '@angular/router';
 import {routes} from './app.routing';
 import { PollsHomeComponent } from './public/polls-home/polls-home.component';
