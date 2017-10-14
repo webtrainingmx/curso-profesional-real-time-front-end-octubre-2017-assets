@@ -1,6 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { VotesService } from '../../auth/polls/services/votes.service';
-import { PollsService } from '../../auth/polls/services/polls.service';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component( {
@@ -8,13 +6,12 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './poll-detail.component.html',
   styleUrls: [ './poll-detail.component.css' ]
 } )
-export class PollDetailComponent implements OnInit, OnDestroy {
+export class PollDetailComponent implements OnInit {
 
 
   constructor( public _activatedRoute: ActivatedRoute ) {
 
   }
-
 
   ngOnInit() {
 
@@ -23,10 +20,4 @@ export class PollDetailComponent implements OnInit, OnDestroy {
       console.log( 'Obtener datos de encuesta ' );
     } );
   }
-
-
-  ngOnDestroy() {
-
-  }
-
 }
