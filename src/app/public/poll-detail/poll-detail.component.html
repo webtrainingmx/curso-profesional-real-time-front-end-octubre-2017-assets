@@ -1,20 +1,8 @@
 <h1>Participa</h1>
 <div class="b-poll b-poll--extended" *ngIf="poll">
   <h2>Encuesta pública</h2>
-  <h3>{{poll.question.label}}</h3>
+  <h3>Título de encuesta</h3>
+  <p>Datos de encuesta (WIP)</p>
 
-  <mat-radio-group class="example-radio-group" [(ngModel)]="userAnswer">
-    <mat-radio-button class="example-radio-button" *ngFor="let answer of poll.answers" [value]="answer">
-      {{answer.label}}
-    </mat-radio-button>
-  </mat-radio-group>
-  <div class="example-selected-value" *ngIf="userAnswer">
-    <div class="b-answer__label">
-      <strong>Tu respuesta es:</strong> {{userAnswer.label}}
-    </div>
-    <div class="b-button-send-answer">
-      <a href="#" (click)="onClickSendVote($event)" class="btn btn-primary">Enviar</a>
-    </div>
-  </div>
-  <app-polls-reports [data]="dataForChart"[options]="dataForChartOptions"></app-polls-reports>
+
 </div>
