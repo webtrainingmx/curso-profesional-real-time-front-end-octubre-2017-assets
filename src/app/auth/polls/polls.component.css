@@ -1,25 +1,18 @@
-.title{
-  font-family: 'Asap Condensed', sans-serif;
-  font-size: 72px;
-  font-weight: bold;
-  letter-spacing: 3.8px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.b-question a{
+.b-question a {
   text-decoration: none;
   font-family: 'Asap Condensed', sans-serif;
-  font-size: 24px;
-  letter-spacing: 3.8px;
+  font-size: 16px;
+  letter-spacing: 3px;
   text-align: left;
-  color: #ffffff;
-  padding-left: 20px;
+  margin: 8px 0;
+  display: block;
+
 }
-.b-question a:hover{
+
+.b-question a:hover {
   color: #0067a5;
 }
 
-.b-button-view-poll{
+.b-button-view-poll {
   padding-top: 5px;
 }

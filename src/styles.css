@@ -1,6 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-body{
+body {
+  font-family: 'Asap Condensed', sans-serif;
   background-color: #29b8f0
+}
+
+a {
+  color: #292929;
+}
+
+h1 {
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #fff;
+  margin: 40px 0 25px 0;
+}
+
+h2 {
+  font-family: 'Asap Condensed', sans-serif;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+/* Layout */
+.b-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.b-main-footer {
+  background: #002e51;
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  height: 74px;
+  width: 100%;
+}
+
+/* Bootstrap overrides */
+.panel-primary > .panel-heading {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #002c53;
+  border: solid 1px #00060b;
 }

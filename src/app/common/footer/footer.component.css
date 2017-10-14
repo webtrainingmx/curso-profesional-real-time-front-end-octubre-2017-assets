@@ -1,11 +1,11 @@
 .b-logo {
   float: left;
-  margin: 10px 0 0 20px;
+  margin: 5px 0 0 -10px;
   padding: 5px 0 0 8px;
   font-size: 26px;
 }
 
-.b-logo img{
+.b-logo img {
   height: 40px;
 }
 
@@ -13,21 +13,14 @@
   color: white;
 }
 
-.b-main-footer {
-  background: #002e51;
-}
-
 .b-main-footer__container {
   min-width: 190px;
   vertical-align: middle;
 }
 
-.b-main-footer__text{
-  font-family: 'Asap', Open-Sans;
+.b-main-footer__text {
   font-size: 16px;
-  font-weight: bold;
-  font-stretch: condensed;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   color: #fff;
   margin: 25px 0;
 }

@@ -1,15 +1,15 @@
-<h1 class="title">Encuestas: </h1>
-<div class="b-poll" *ngFor="let poll of polls">
-  <div class="col-xs-12">
-    <div class="b-question">
-      <a routerLink="/encuestas/detalle/{{poll.id}}">
-        <strong>{{ poll.question.label }}</strong>
-      </a>
+<h1 class="title">Encuestas</h1>
+<div class="panel panel-primary">
+  <div class="panel-heading">Encuestas disponibles</div>
+  <div class="panel-body">
+    <div class="b-poll" *ngFor="let poll of polls">
+      <div class="col-xs-12">
+        <div class="b-question">
+          <a routerLink="/encuestas/detalle/{{poll.id}}">
+            <strong>{{ poll.question.label }}</strong>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-
-
-
-
